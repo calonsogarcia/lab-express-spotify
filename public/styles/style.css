@@ -1,0 +1,9 @@
+#search-form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 10rem;
+    height: 1rem;
+    margin: 10rem;
+}
