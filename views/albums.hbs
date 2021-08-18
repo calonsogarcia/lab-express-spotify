@@ -1,5 +1,13 @@
-<div>
-    <p>{{name}}</p>
-    <img src="{{cover}}" alt="Album cover">
-    <a href="/artistTracks/someArtistTracksGoHere">View tracks</a>
-</div>
+<ul>
+    {{#each albums}}
+        <li>
+            {{this.name}}
+            {{#if this.images}}
+                <img src="{{this.images.0.url}}" alt="{{this.name}}">
+            {{/if}}
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </li>
+    {{/each}}
+</ul>
+
+
