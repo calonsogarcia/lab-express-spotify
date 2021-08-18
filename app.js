@@ -58,7 +58,7 @@ app.get("/tracks/:albumtId", (request, response, next) => {
   .getAlbumTracks(request.params.albumtId)
   .then((data) => {
     console.log('This are the tracks in the album', data.body);
-    response.render("tracks", {tracks: data.body.items.url})
+    response.render("tracks", {tracks: data.body.items})
   })
   .catch(err => {
     console.log('Something went wrong!', err);
